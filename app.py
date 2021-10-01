@@ -5,6 +5,11 @@ app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 
+@app.route('/')
+def index():
+    return redirect(f"/login")
+
+
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     response = None
