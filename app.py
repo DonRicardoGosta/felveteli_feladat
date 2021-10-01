@@ -28,7 +28,7 @@ def login():
 def data(api_key):
     if api_key == "7a55204fb9d7076b6d73b3bc5d8ed2849d86a26e":
         response_data = {"id": 1, "name": "Dani", "age": 20}, {"id": 2, "name": "Jenő", "age": 21}, {"id": 3, "name": "Peti", "age": 22}
-        return jsonify(response_data)
+        return render_template("data.html", resp_data = response_data)
     return "401 Unauthorized"
 
 
