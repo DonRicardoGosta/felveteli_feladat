@@ -16,7 +16,7 @@ def login():
                 # session['username'] = request.form['username']
                 # session['password'] = request.form['password']
                 return_token = {"token": "7a55204fb9d7076b6d73b3bc5d8ed2849d86a26e"}
-                response = return_token
+                return redirect("/data/x-api-key:7a55204fb9d7076b6d73b3bc5d8ed2849d86a26e")
             else:
                 response = "401 Unauthorized"
         else:
