@@ -5,6 +5,23 @@
 
 {% block content %}
 <div id="response-data-container">
-    {{ resp_data }}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+        </tr>
+      </thead>
+      <tbody>
+       {% for data in resp_data %}
+        <tr>
+          <th scope="row">{{ data["id"]}}</th>
+          <td> {{ data["name"] }}</td>
+          <td>{{ data["age"] }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
 </div>
 {% endblock %}
