@@ -38,10 +38,6 @@ def data(api_key):
     return render_template("data.html", resp_data=response_data)
 
 
-def main():
-    print("main")
-
-
 if __name__ == '__main__':
     app.debug = True
     app.run()
