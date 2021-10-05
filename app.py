@@ -31,11 +31,13 @@ def login():
 
 @app.route('/data/x-api-key:<api_key>')
 def data(api_key):
+    error_msg = None
+    response_data = {}
     if api_key == "7a55204fb9d7076b6d73b3bc5d8ed2849d86a26e":
         response_data = {"id": 1, "name": "Dani", "age": 20}, {"id": 2, "name": "Jenő", "age": 21}, {"id": 3, "name": "Peti", "age": 22}
     else:
-        response_data = "401 Unauthorized"
-    return render_template("data.html", resp_data=response_data)
+        error_msg = "401 Unauthorized"
+    return render_template("data.html", resp_data=response_data, error_msg=error_msg)
 
 
 if __name__ == '__main__':
